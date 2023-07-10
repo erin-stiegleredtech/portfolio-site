@@ -1,0 +1,25 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/naming-convention": [
+       "error",
+       {
+        "selector": "variable",
+        "modifiers": ["const", "exported"],
+        "types": ["function"],
+        "format": ["PascalCase"]
+       }
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
+}
